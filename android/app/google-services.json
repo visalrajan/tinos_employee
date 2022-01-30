@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "363670587157",
+    "project_id": "tinos-employee-a81ff",
+    "storage_bucket": "tinos-employee-a81ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:363670587157:android:535d3690519968515f0b1c",
+        "android_client_info": {
+          "package_name": "com.example.tinos_employee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "363670587157-i0htecvf426a4sfk5q625gi7t8dr1c7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Lnkz_Y91PDe8iE_E91SI5uyUDpRh_pA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "363670587157-i0htecvf426a4sfk5q625gi7t8dr1c7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
