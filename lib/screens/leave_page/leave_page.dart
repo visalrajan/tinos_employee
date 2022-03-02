@@ -46,6 +46,7 @@ class _LeavePageState extends State<LeavePage> {
   late var uid =user?.uid;
 
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -295,8 +296,10 @@ class _LeavePageState extends State<LeavePage> {
 
                   SharedPreferences prefs = await SharedPreferences.getInstance();
                   Object? userEmail = "";
+                  Object? userName = "";
                   if (prefs.containsKey("email")) {
                     userEmail = prefs.get("email");
+
                   }
 
 
@@ -329,7 +332,11 @@ class _LeavePageState extends State<LeavePage> {
                     "${valueChoose2.toString()}",
                     "reason":
                     "${reason.text.toString()}",
-                    "email": userEmail
+                    "email": userEmail,
+                    // "name":
+                    // "${nameEditingController.text.toString()}",
+
+
                   });
 
 
