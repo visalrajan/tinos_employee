@@ -4,7 +4,6 @@ import 'package:tinos_employee/screens/leave_page/leave_page.dart';
 import 'package:tinos_employee/screens/punch_page/punch_page.dart';
 import 'package:tinos_employee/screens/task/task.dart';
 
-
 class UserPage extends StatefulWidget {
   const UserPage({Key? key}) : super(key: key);
 
@@ -14,7 +13,7 @@ class UserPage extends StatefulWidget {
 
 class _UserPageState extends State<UserPage> {
   int currentIndex = 0;
-  final _pages = [PunchPage(), LeavePage(), TaskPage()];
+  final _pages = [const PunchPage(), const LeavePage(), const TaskPage()];
 
   @override
   Widget build(BuildContext context) {

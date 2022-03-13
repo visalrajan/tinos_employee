@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:tinos_employee/screens/loginscreen/loginscreen.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -21,9 +20,9 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: FutureBuilder(
         future: _initializeFirebase(),
-        builder: (context, snapshot){
-          if (snapshot.connectionState == ConnectionState.done){
-            return LoginScreen();
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return const LoginScreen();
           }
           return const Center(
             child: CircularProgressIndicator(),

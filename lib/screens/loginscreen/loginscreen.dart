@@ -5,7 +5,6 @@ import 'package:tinos_employee/screens/signup_user/signup_user.dart';
 import 'package:tinos_employee/screens/user_page/user_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -18,11 +17,9 @@ class _LoginScreenState extends State<LoginScreen> {
   var defaultPassword = "12345678";
 
   static Future<User?> loginUsingEmailPassword(
-
-      {
-        required String email,
-        required String password,
-        required BuildContext context}) async {
+      {required String email,
+      required String password,
+      required BuildContext context}) async {
     FirebaseAuth auth = FirebaseAuth.instance;
     User? user;
     try {
@@ -53,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             Container(
               alignment: Alignment.center,
-              child: Text(
+              child: const Text(
                 "TINOS",
                 style: TextStyle(
                     color: Colors.teal,
@@ -61,14 +58,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 40,
             ),
             Container(
-              child: Text(
+              child: const Text(
                 "Username",
                 style: TextStyle(
-                  // fontWeight: FontWeight.bold,
+                    // fontWeight: FontWeight.bold,
                     fontSize: 18),
               ),
             ),
@@ -92,22 +89,20 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(color: Colors.teal, width: 2),
-
-
               ),
             ),
             const SizedBox(
               height: 26.0,
             ),
             Container(
-              child: Text(
+              child: const Text(
                 "Password",
                 style: TextStyle(
-                  // fontWeight: FontWeight.bold,
+                    // fontWeight: FontWeight.bold,
                     fontSize: 18),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             Container(
@@ -126,7 +121,6 @@ class _LoginScreenState extends State<LoginScreen> {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(color: Colors.teal, width: 2),
-
               ),
             ),
             const SizedBox(
@@ -145,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   showDialog(
                       context: context,
                       builder: (BuildContext context) {
-                        return Center(
+                        return const Center(
                           child: CircularProgressIndicator(
                             color: Colors.purple,
                             strokeWidth: 6.0,
@@ -158,17 +152,19 @@ class _LoginScreenState extends State<LoginScreen> {
                       context: context);
                   print(user);
                   if (user != null) {
-                    if(defaultEmail == _emailController.text) {
+                    if (defaultEmail == _emailController.text) {
                       // Navigator.of(context).pop();
                       // Navigator.of(context).pushReplacement(MaterialPageRoute(
                       //     builder: (context) => SignupUser()));
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignupUser()));
-                    }else{
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignupUser()));
+                    } else {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => UserPage()));
+                          builder: (context) => const UserPage()));
                     }
                   }
-
                 },
                 child: const Text(
                   "PROCEED",
@@ -186,4 +182,3 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
-
